@@ -1,0 +1,8 @@
+---
+false
+---
+X: lucy
+X: garfield
+X: bowler_cat
+---
+FavoriteFood: lasagna

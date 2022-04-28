@@ -1,0 +1,4 @@
+INPUT make_a_triple (3, 4, 5)
+INPUT make_a_triple (5, 12, 13)
+QUERY make_a_triple (X, 4, Y)
+QUERY make_a_triple (X, X, Y)

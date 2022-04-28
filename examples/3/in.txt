@@ -1,0 +1,7 @@
+QUERY is_a_cat (X)
+INPUT is_a_cat (lucy)
+INPUT is_a_cat (garfield)
+INPUT loves (garfield, lasagna)
+INPUT is_a_cat (bowler_cat)
+QUERY is_a_cat (X)
+QUERY loves (garfield, FavoriteFood)
