@@ -34,3 +34,4 @@ factengine-*.tar
 
 # No proprietary stuff
 *.pdf
+examples/

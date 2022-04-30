@@ -1,3 +1,0 @@
-INPUT are_friends (alex, sam)
-INPUT are_friends (frog, toad)
-QUERY are_friends (X, sam)
