@@ -85,6 +85,7 @@ defmodule FactEngine do
                   Enum.map(subjects, fn subject ->
                     [string_subject] = subject
                     IO.puts("#{query_variables}: #{string_subject}")
+                    true
                     # IO.inspect({query_variables, subject}, label: "Query, actual")
                     
 

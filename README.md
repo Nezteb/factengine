@@ -31,9 +31,21 @@ Steps:
          ```
 3. Implement the `QUERY` commands that will query the logic table.
    1. Check which subjects we know have this property (following examples assume the adjacency lists above)
-      1. `QUERY are_friends (X, sam)` would check the `"are_friends"` key for any sublist containing `"sam"` and return all *other* list entries.
-      2. `QUERY is_a_cat (X)` would check `"is_a_cat"` and return everything in the list. `QUERY loves (garfield, FavoriteFood)` would check `"loves"` for any sublist containing `"garfield"` and return all *other* list entries.
-      3. `QUERY make_a_triple (X, 4, Y)` would check `"make_a_triple"` for any sublist that contains `"4"` and return the rest of the elements if equal to the number of variables. `QUERY make_a_triple (X, X, Y)` would check `"make_a_triple"` and look for any list that has two variables of the same value (and in this case find none, thus returning false).
+      1. `examples/2`
+         1. `QUERY are_friends (X, sam)` would check the `"are_friends"` key for any sublist containing `"sam"` and return all *other* list entries.
+      2. `examples/3`
+         1. `QUERY is_a_cat (X)` would check `"is_a_cat"` and return everything in the list. 
+         2. `QUERY loves (garfield, FavoriteFood)` would check `"loves"` for any sublist containing `"garfield"` and return all *other* list entries.
+            1. Although we can't assume there will only ever be one variable
+      3.`examples/4`
+         1. `QUERY make_a_triple (X, 4, Y)` would check `"make_a_triple"` for any sublist that contains `"4"` and return the rest of the elements if equal to the number of variables.
+         2. `QUERY make_a_triple (X, X, Y)` would check `"make_a_triple"` and look for any list that has two variables of the same value (and in this case find none, thus returning false).
+         3. With multiple variables: we'd need to build a separate variable map for each query and match them in order, something like: 
+         ```$$
+         %{
+            "X" -> ""
+         }
+         ```
 4. Build a module that will test the logic engine's output against the `out.txt` files.
 
 Steps 1 and 4 seem trivial. Steps 2 and 3 are going to be the real meat and potatos.
